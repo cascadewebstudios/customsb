@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Bangers&family=Permanent+Marker&display=swap');
 
+
 /* General Styles */
 
 :root {
@@ -20,25 +21,27 @@ body, html {
   background-color: var(--black);
   color: var(--white);
   font-family: 'Abel', sans-serif;
-  font-size: 32px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
 h2 {
   font-family: 'Permanent Marker', sans-serif;
-  font-size: 80px;
+  font-size: 48px;        
   z-index: 1;
-  margin: 0;
 }
 
 .bangers-xl {
   font-family: 'Bangers', sans-serif;
-  font-size: 180px;
+  font-size: 100px;
 }
 
 .bangers-sm {
   font-family: 'Bangers', sans-serif;
-  font-size: 36px;
+  font-size: 28px;
+  font-style: normal;
+  display: inline-block; 
+  transform: skew(-10deg);
 }
 
 /* Nav bar */
