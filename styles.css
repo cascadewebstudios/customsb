@@ -25,19 +25,19 @@ body, html {
 }
 
 h2 {
-  font-family: 'Permanent Marker', regular;
+  font-family: 'Permanent Marker', sans-serif;
   font-size: 80px;
   z-index: 1;
   margin: 0;
 }
 
 .bangers-xl {
-  font-family: 'Bangers', regular;
+  font-family: 'Bangers', sans-serif;
   font-size: 180px;
 }
 
 .bangers-sm {
-  font-family: 'Bangers', regular;
+  font-family: 'Bangers', sans-serif;
   font-size: 36px;
 }
 
