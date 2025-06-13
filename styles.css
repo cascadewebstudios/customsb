@@ -51,7 +51,75 @@ h2 {
 /* About */
 
 /* Gallery */
+#gallery {
+  background: black;
+  padding: 60px 0;
+  text-align: center;
+}
+
+#gallery h2 {
+  font-size: 4rem;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.scrolling-gallery {
+  overflow: hidden;
+  position: relative;
+  max-width: 85vw;
+  margin: 0 auto;
+}
+
+.scroll-track {
+  display: flex;
+  gap: 5vw;
+  animation: scroll-left 11s linear infinite;
+  will-change: transform;
+}
+
+.gallery-card {
+  flex: 0 0 auto;
+  height: 60vh;   
+  width: auto;                 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 0.6rem;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.gallery-card img {
+  height: 100%;                    
+  width: auto;                     
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  border-radius: 15px;
+}
+
+
+.gallery-card:hover {
+  transform: scale(1.03);
+}
+
+.scrolling-gallery:hover .scroll-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .gallery-card{
+    max-height: 50vw;
+  }
+}
+
+
 
 /* Process */
 
-/* Footer */
