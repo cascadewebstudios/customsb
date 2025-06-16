@@ -52,7 +52,7 @@
 
     <!--Gallery-->
     <section id="gallery">
-      <h2>Gallery</h2>
+      <h2 class="typing-header">Gallery</h2>
       <div class="scrolling-gallery">
         <div class="scroll-track">
           <!-- Repeat your 6 images twice for seamless loop -->
@@ -77,6 +77,17 @@
 
 
     <!--Proccess-->
+    <section id="process">
+      <h2 class="typing-header">Process</h2>
+      <div class="video-container">
+        <video autoplay loop muted playsinline src="assets/customsb_vid1.mp4"></video>        
+        <video autoplay loop muted playsinline src="assets/customsb_vid2.mp4"></video>    
+        <video autoplay loop muted playsinline src="assets/customsb_vid3.mp4"></video>    
+      </div>
+    </section>
+
+
+
 
     <!--Footer-->
   </body>
@@ -124,5 +135,24 @@
       });
     });
 
+  //Animates typing headers
+  document.addEventListener('DOMContentLoaded', () => {
+  const headers = document.querySelectorAll('.typing-header');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('start-typing');
+        observer.unobserve(entry.target); 
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  headers.forEach(header => {
+    observer.observe(header);
+  });
+});
   </script>
 </html>
