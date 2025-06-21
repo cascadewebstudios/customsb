@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');/* General Styles */
 
 :root {
-  --black: #1f160e;
+  --black: #121212;
   --white: #FFFFFF;
 }
 
@@ -26,13 +26,11 @@ body, html {
 h2 {
   font-family: 'Permanent Marker', sans-serif;
   font-size: 48px;        
-  font-size: 48px;        
   z-index: 1;
 }
 
 .bangers-xl {
   font-family: 'Bangers', sans-serif;
-  font-size: 100px;
   font-size: 100px;
 }
 
