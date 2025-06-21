@@ -26,16 +26,22 @@ body, html {
 h2 {
   font-family: 'Permanent Marker', sans-serif;
   font-size: 48px;        
+  font-size: 48px;        
   z-index: 1;
 }
 
 .bangers-xl {
   font-family: 'Bangers', sans-serif;
   font-size: 100px;
+  font-size: 100px;
 }
 
 .bangers-sm {
   font-family: 'Bangers', sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  display: inline-block; 
+  transform: skew(-10deg);
   font-size: 28px;
   font-style: normal;
   display: inline-block; 
@@ -197,6 +203,52 @@ nav.scrolled {
 /* Hero */
 
 /* About */
+#about-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  padding: 2rem 5vw;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; 
+}
+
+.about-left {
+  flex: 2 1 40%;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-left img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; 
+}
+
+.about-right {
+  flex: 1 1 40%;
+  min-width: 280px;
+}
+
+.badge {
+  font-family: 'Bangers', sans-serif;
+  font-size: 28px;
+  font-size: 1.5rem;
+}
+
+.about-right h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.about-right p {
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 50ch;
+}
 
 /* Gallery */
 #gallery {
@@ -310,7 +362,6 @@ nav.scrolled {
 
 
 /* Process */
-
 #process {
   padding: 60px 0;
   text-align: center;
@@ -359,4 +410,31 @@ nav.scrolled {
     padding-left: 4rem;
     padding-right: 4rem;
   }
+}
+
+
+/*Footer*/
+.site-footer {
+  background-color: #222222;
+  color: #eee;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 15px;
+  font-family: 'Abel', sans-serif;
+}
+
+.footer-icons {
+  margin-top: 0rem;
+}
+
+.footer-icons a {
+  color: #eee;
+  text-decoration: none;
+  font-size: 1.8rem; 
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: #bbb;
 }
