@@ -30,16 +30,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 
 // Auto-scroll gallery
-const cards = document.querySelectorAll('.product-card');
+const track = document.querySelector('.scroll-track');
+const gallery = document.querySelector('.scrolling-gallery');
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+track.innerHTML += track.innerHTML;
+
+let lastTime = null;
+let offset = 0;
+let paused = false;
+
+gallery.addEventListener('mouseenter', () => paused = true);
+gallery.addEventListener('mouseleave', () => paused = false);
+
+function step(timestamp) {
+  if (!lastTime) lastTime = timestamp;
+
+  const delta = timestamp - lastTime;
+  lastTime = timestamp;
+
+  if (!paused) {
+    offset += delta * 0.065;
+    if (offset >= track.scrollWidth / 2) {
+      offset = 0;
     }
-  });
-}, {
-  threshold: 0.3,
-});
+    track.style.transform = `translateX(-${offset}px)`;
+  }
 
-cards.forEach(card => observer.observe(card));
+  requestAnimationFrame(step);
+}
+
+requestAnimationFrame(step);

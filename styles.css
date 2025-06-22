@@ -271,7 +271,8 @@ nav.scrolled {
 .scroll-track {
   display: flex;
   gap: 5vw;
-  animation: scroll-left 11s linear infinite;
+  width: max-content;
+  /* animation: scroll-left 9s linear infinite; */
   will-change: transform;
 }
 
@@ -282,7 +283,7 @@ nav.scrolled {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #000000;
+  background: var(--black);
   padding: 0.6rem;
   border-radius: 15px;
   transition: transform 0.3s ease;
