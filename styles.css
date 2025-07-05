@@ -239,9 +239,34 @@ nav.scrolled {
 
 .about-right h2 {
   margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 3.5rem;
+  margin-bottom: 2px;
+  font-size: 3.2rem;
 }
+
+.typing-header {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  width: 0;
+}
+
+.typing-header.start-typing {
+  animation: typing 1.5s steps(14, end) forwards;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 14ch } 
+}
+
+/*.about-right.start-typing{
+  animation: typewriter 1.5s steps(14, end) forwards;
+}
+
+@keyframes typewriter {
+  from { width: 0 }
+  to { width: 14ch } 
+}*/
 
 .about-right p {
   font-size: 1rem;
@@ -264,6 +289,15 @@ nav.scrolled {
   .about-right p {
     max-width: 80ch;
   }
+
+    .about-right h2 {
+    text-align: center;
+  }
+
+  .about-right p {
+    text-align: center;
+  }
+
 }
 
 
@@ -276,7 +310,7 @@ nav.scrolled {
 
 #gallery h2 {
   font-size: 3.5rem;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   margin-top: 0px;
   color: white;
   overflow: hidden;
@@ -402,6 +436,7 @@ nav.scrolled {
 
 .typing-header {
   font-size: 3.5rem;
+  margin-top: 0.2rem;
   margin-bottom: 40px;
   overflow: hidden;
   white-space: nowrap;
@@ -410,12 +445,12 @@ nav.scrolled {
 }
 
 .typing-header.start-typing {
-  animation: typing 1.5s steps(7, end) forwards;
+  animation: typing 1.5s steps(14, end) forwards;
 }
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 7ch } 
+  to { width: 14ch } 
 }
 
 .video-section {
@@ -471,3 +506,4 @@ nav.scrolled {
 .footer-icons a:hover {
   color: #bbb;
 }
+
