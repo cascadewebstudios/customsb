@@ -240,7 +240,7 @@ nav.scrolled {
 .about-right h2 {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 
 .about-right p {
@@ -269,14 +269,29 @@ nav.scrolled {
 
 /* Gallery */
 #gallery {
+  margin-top: 0px;
   padding: 60px 0;
   text-align: center;
 }
 
 #gallery h2 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin-bottom: 40px;
+  margin-top: 0px;
   color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  width: 0;
+}
+
+.gallery-header.start-typing{
+  animation: typewriter 1.5s steps(11, end) forwards;
+}
+
+@keyframes typewriter {
+  from { width: 0 }
+  to { width: 11ch } 
 }
 
 .scrolling-gallery {
@@ -386,7 +401,7 @@ nav.scrolled {
 }
 
 .typing-header {
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin-bottom: 40px;
   overflow: hidden;
   white-space: nowrap;
